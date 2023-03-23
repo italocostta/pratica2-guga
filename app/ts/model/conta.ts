@@ -31,6 +31,11 @@ class Conta {
         this._saldo += valor;
     }
 
+    transferir(valor: number, destino: Conta) {
+        this.debitar(valor);
+        destino.creditar(valor);
+    }
+
     toString(): string {
         return `Número: ${this._numero} 
         - Saldo: ${this._saldo}`;
