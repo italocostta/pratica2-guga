@@ -26,4 +26,13 @@ class Cliente {
     set cpf(cpf: String) {
         this._cpf = cpf;
     }
+
+    // get conta(): Number {
+    //     return this._conta;
+    // }
+
+    // set conta(conta: Number, saldo: Number) {
+    //     this._conta = conta;
+    // }
 }
+
