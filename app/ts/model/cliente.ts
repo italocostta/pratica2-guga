@@ -1,9 +1,9 @@
 class Cliente {
-    private _nome: String;
-    private _cpf: String;
+    private _nome: string;
+    private _cpf: string;
     private _conta: Conta;
 
-    constructor(nome: String, cpf: String, conta: Conta) {
+    constructor(nome: string, cpf: string, conta: Conta) {
 
         this._nome = nome;
         this._cpf = cpf;
@@ -11,25 +11,32 @@ class Cliente {
 
     }
 
-    get nome(): String {
+    get nome(): string {
         return this._nome;
     }
 
-    set nome(nome: String) {
+    set nome(nome: string) {
         this._nome = nome;
     }
 
-    get cpf(): String {
+    get cpf(): string {
         return this._cpf;
     }
 
-    set cpf(cpf: String) {
+    set cpf(cpf: string) {
         this._cpf = cpf;
     }
 
-    // get conta(): Number {
-    //     return this._conta;
-    // }
+    get conta(): Conta {
+         return this._conta;
+     }
+
+     toString(): string {
+        return `Cliente: 
+                nome: ${this._nome}
+                cpf: ${this._cpf}
+                conta: ${this._conta.toString()}`;
+    }
 
     // set conta(conta: Number, saldo: Number) {
     //     this._conta = conta;

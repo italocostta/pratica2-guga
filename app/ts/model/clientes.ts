@@ -1,28 +1,30 @@
 class Clientes {
-    listaClientes: Cliente[];
+    //private listaClientes: Cliente[];
+    private _clientes: Array<Cliente>
 
     constructor() {
-        this.listaClientes = [];
+        this._clientes = [];
     }
 
     inserir(cliente: Cliente): void {
-        this.listaClientes.push(cliente);
+        this._clientes.push(cliente);
     }
 
-    remover(cpf: String): void {
-        this.listaClientes = this.listaClientes.filter((cliente) => cliente.cpf !== cpf );
+    remover(cpf: string): void {
+        this._clientes = this._clientes.filter((cliente) => cliente.cpf !== cpf );
     }
 
-    listar(cliente: Cliente) {
-        return this.listaClientes;
+    listar(): Array<Cliente> {
+        return this._clientes;
     }
 
-    pesquisar(cpf: String) {
-        if (this.listaClientes.find((cliente) => cliente.cpf === cpf)) {
-            return this.listaClientes;
+    pesquisar(cpf: string) {
+        if (this._clientes.find((cliente) => cliente.cpf === cpf)) {
+            return this._clientes;
         } else {
             console.log("Cliente não encontrado");
         }
 
     }
+
 }

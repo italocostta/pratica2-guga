@@ -26,7 +26,7 @@ class ContaController {
         const botaoApagar = document.createElement('button');
         botaoApagar.textContent = 'X';
         botaoApagar.addEventListener('click', (event) => {
-            console.log('removendo conta ' + conta.toString());
+            console.log(`Removendo ${conta.toString()}`);
             this.contas.remover(conta.numero);
             event.target.parentElement.remove();
         });

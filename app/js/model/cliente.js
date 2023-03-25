@@ -19,4 +19,13 @@ class Cliente {
     set cpf(cpf) {
         this._cpf = cpf;
     }
+    get conta() {
+        return this._conta;
+    }
+    toString() {
+        return `Cliente: 
+                nome: ${this._nome}
+                cpf: ${this._cpf}
+                conta: ${this._conta.toString()}`;
+    }
 }
