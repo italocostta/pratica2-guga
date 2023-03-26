@@ -1,5 +1,2 @@
-const clienteController: ClienteController = new ClienteController();
+let clienteController: ClienteController = new ClienteController();
 clienteController.listar();
-
-// const contaController: ContaController = new ContaController();
-// contaController.listar()

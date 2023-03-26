@@ -33,16 +33,15 @@ class ContaController {
     inserirContaNoHTML(conta: Conta) {
         const elementoP = document.createElement('p');
         elementoP.textContent = conta.toString();
-
         const botaoApagar = document.createElement('button');
         botaoApagar.textContent = 'X';
         botaoApagar.addEventListener('click',
-            (event: Event) => {
-                console.log(`Removendo ${conta.toString()}`);
+            (event) => {
+                console.log('removendo conta ' + conta.toString());
                 this.contas.remover(conta.numero);
                 (<Element>event.target).parentElement.remove();
-            });
-
+            }
+            );
         elementoP.appendChild(botaoApagar);
         document.body.appendChild(elementoP);
     }
