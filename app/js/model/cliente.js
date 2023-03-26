@@ -22,6 +22,9 @@ class Cliente {
     get conta() {
         return this._conta;
     }
+    set conta(conta) {
+        this._conta = conta;
+    }
     toString() {
         return `Cliente: 
                 nome: ${this._nome}
